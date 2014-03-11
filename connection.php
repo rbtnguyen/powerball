@@ -2,10 +2,10 @@
 
 //define constants for db_host, db_user, db_pass, and db_database
 //adjust the values below to match your database settings
-define('DB_HOST', 'us-cdbr-east-05.cleardb.net');
-define('DB_USER', 'b13de379921aa1');
-define('DB_PASS', '228bcef0'); //set DB_PASS as 'root' if you're using MAMP
-define('DB_DATABASE', 'heroku_d2d479b04a807a8');
+define('DB_HOST', '');
+define('DB_USER', '');
+define('DB_PASS', ''); //set DB_PASS as 'root' if you're using MAMP
+define('DB_DATABASE', '');
 
 //connect to database host
 $connection = mysql_connect(DB_HOST, DB_USER, DB_PASS) or die('Could not connect to the database host (please double check the settings in connection.php): ' . mysql_error());
