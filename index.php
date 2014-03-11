@@ -68,7 +68,7 @@ session_start();
 			</table>
 			<div class='overlay'>
 				<div class='inner-overlay'>
-					<p>Jackpot amount based on average powerball jackpot. <a target="blank" href="http://www.lottostrategies.com/script/jackpot_history/draw_date/101">Source</a></p>
+					<p>Powerball tickets cost $2 each.<br />Jackpot amount based on average powerball jackpot. <a target="blank" href="http://www.lottostrategies.com/script/jackpot_history/draw_date/101">Source</a></p>
 				</div>
 			</div>
 		</div>
