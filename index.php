@@ -109,7 +109,7 @@ session_start();
 						<select name='tickets'>
 							<option value='1'>1</option>
 							<option value='104'>104 (Twice a Week for 1 Year)</option>
-							<option value='1040' selected>1,040 (Twice a Week for 10 yYears)</option>
+							<option value='1040' selected>1,040 (Twice a Week for 10 Years)</option>
 							<option value='5200'>5,200 (Twice a Week for 50 Years)</option>
 							<option value='10000'>10,000 (≈ 20 Tickets a Week for 10 Years)</option>
 						</select>
@@ -148,10 +148,10 @@ session_start();
 			  		{
 			  			$only1 = '';
 			  			$only2 ='';
-			  			$times = $_SESSION['max_prize_freq']." times";
+			  			$times = "<strong>".$_SESSION['max_prize_freq']."</strong> times";
 			  		}
 
-			  		echo "You just played ".($_SESSION['dollars_spent'] / 2). " times. The largest prize you ever won was ".$only1." $".$_SESSION['max_prize']." and you ".$only2." won this amount ".$times."!";
+			  		echo "You just played <strong>".($_SESSION['dollars_spent'] / 2). "</strong> times. The largest prize you ever won was ".$only1." <strong>$".$_SESSION['max_prize']."</strong> and you ".$only2." won this amount ".$times."!";
 	  			}
 	  			else
 	  			{
@@ -163,17 +163,17 @@ session_start();
 		 	<?php 
 		 		$query = fetch_all("SELECT SUM(prize_money), SUM(money_spent), SUM(max_prize) FROM results");
 				$percentage = 100*$query[0]['SUM(prize_money)']/ $query[0]['SUM(money_spent)'];
-				echo 'Out of the $'.$query[0]['SUM(money_spent)'].' spent on tickets, players have won back $'.$query[0]['SUM(prize_money)']." or ".round($percentage)."% of their money. <br>";
+				echo 'Out of the <strong>$'.$query[0]['SUM(money_spent)'].'</strong> spent on tickets, players have won back <strong>$'.$query[0]['SUM(prize_money)']."</strong> or <strong>".round($percentage)."%</strong> of their money. <br>";
 
 				if($query[0]['SUM(max_prize)'] == 0)
 				{
-					echo '<br />No one has won the jackpot yet!';
+					echo '<br /><strong>No one has won the jackpot yet!</strong>';
 				}
 				elseif ($query[0]['SUM(max_prize)'] == 1) {
-					echo '<br />The jackpot has been won once!';
+					echo '<br /><strong>The jackpot has been won once!</strong>';
 				}
 				else{
-					echo '<br />The jackpot has been won '.$query[0]['SUM(max_prize)'].' times!';
+					echo '<br /><strong>The jackpot has been won '.$query[0]['SUM(max_prize)'].' times!</strong>';
 				}
 
 				
