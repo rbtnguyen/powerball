@@ -268,7 +268,7 @@ session_start();
 							}
 						  if($_SESSION['mega_number'] == $one_draw_data['mega_number'])
 						  {
-						  	echo "+ "."<span class='red-ball'>".$one_draw_data['mega_number']."</span>";
+						  	echo "<span class='red-ball'>".$one_draw_data['mega_number']."</span>";
 						  }
 					?>
 					</td>
@@ -290,7 +290,7 @@ session_start();
 						}
 						elseif($one_draw_data['prize'] == 122340000)
 						{
-							echo "<span class='grand-prize prize'>'$".$one_draw_data['prize']." HOLY $%#@ YOU WON!!!!</span>";
+							echo "<span class='grand-prize prize'>'$".$one_draw_data['prize']." JACKPOT!!!</span>";
 						}
 						else
 						{
